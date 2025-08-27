@@ -35,8 +35,15 @@ body {
 }
 
 .circle {
-  border: solid;
   width: 350px;
   height: 350px;
   border-radius: 100%;
+  filter: blur(150px);
+  position: absolute;
+}
+
+.circle--purple {
+  background: var(--purple-transparent);
+  right: 50%;
+  bottom: 50%;
 }
