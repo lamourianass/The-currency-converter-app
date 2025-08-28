@@ -131,3 +131,10 @@ body {
 .currency-converter__select select::-webkit-scrollbar-thumb {
   background: var(--primary-color);
 }
+
+.currency-converter__select-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
