@@ -95,7 +95,6 @@ body {
 }
 
 .currency-converter__select {
-
   display: flex;
   align-items: center;
   gap: 8px;
@@ -123,7 +122,6 @@ body {
   font-size: 16px;
 }
 
-
 .currency-converter__select select::-webkit-scrollbar {
   background: var(--dark-gray-light);
 }
@@ -150,6 +148,10 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: 100ms ease;
+}
+
+.currency-converter__swap-btn:active {
+  transform: scale(0.95);
 }
 
 .currency-converter__swap-btn i {
