@@ -75,3 +75,15 @@ body {
   margin-bottom: 48px;
   text-align: center;
 }
+
+.currency-converter__input {
+  width: 100%;
+  padding-inline: 16px;
+  padding-block: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  outline: solid 2px transparent;
+}
