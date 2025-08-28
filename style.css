@@ -138,3 +138,7 @@ body {
   gap: 24px;
   flex-wrap: wrap;
 }
+
+.currency-converter__swap-btn {
+  background: var(--primary-color);
+}
