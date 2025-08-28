@@ -141,4 +141,8 @@ body {
 
 .currency-converter__swap-btn {
   background: var(--primary-color);
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  border: solid 2px rgba(0, 0, 0, 0.2);
 }
