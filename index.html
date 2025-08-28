@@ -17,14 +17,26 @@
     <div class="circle circle--blue"></div>
     <main class="currency-converter">
       <h1 class="currency-converter__title">Currency Converter</h1>
-      <input class="currency-converter__input" placeholder="0" type="number"  id="inputSourceCurrency">
+      <input
+        class="currency-converter__input"
+        placeholder="0"
+        type="number"
+        id="inputSourceCurrency"
+      />
       <div class="currency-converter__select-group">
         <section class="currency-converter__select">
-          <img id="imageSourceCurrency" src="https://flagcdn.com/w640/us.png">
-           <select id="selectSourceCurrency">
+          <img id="imageSourceCurrency" src="https://flagcdn.com/w640/us.png" />
+          <select id="selectSourceCurrency">
             <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-           </select>
+            <option value="IDR">IDR</option>
+          </select>
+        </section>
+        <section class="currency-converter__select">
+          <img id="imageTargetCurrency" src="https://flagcdn.com/w640/id.png" />
+          <select id="selectTargetCurrency">
+            <option value="IDR">IDR</option>
+            <option value="USD">USD</option>
+          </select>
         </section>
       </div>
     </main>

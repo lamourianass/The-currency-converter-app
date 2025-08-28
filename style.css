@@ -124,3 +124,10 @@ body {
 }
 
 
+.currency-converter__select select::-webkit-scrollbar {
+  background: var(--dark-gray-light);
+}
+
+.currency-converter__select select::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
