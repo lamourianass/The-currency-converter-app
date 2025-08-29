@@ -123,11 +123,11 @@ body {
 }
 
 .currency-converter__select select::-webkit-scrollbar {
-  background: var(--dark-gray-light);
+  background-color: var(--dark-gray-light);
 }
 
 .currency-converter__select select::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 .currency-converter__select-group {
