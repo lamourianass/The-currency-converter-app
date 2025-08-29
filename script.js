@@ -12,6 +12,8 @@ const selectTargetCurrency = document.getElementById('selectTargetCurrency')
 const btnConvert = document.getElementById('btnConvert')
 
 let conversionRate = 0
+let sourceCurrencyValue = 0
+let targetCurrencyValue = 0
 // Swap source and target currencies
 
 // Update exchange rate upon input
@@ -40,6 +42,14 @@ btnConvert.addEventListener('click', async () => {
 })
 
 // Update exchange rate displayed
+function updateExchangeRate() {
+  sourceCurrencyValue = parseFloat(inputSourceCurrency.value).toFixed(2)
+  targetCurrencyValue = (sourceCurrencyValue * conversionRate)
+  exchangeRateText.textContent = `
+  ${formatCurrency(sourceCurrencyValue)} ${selectSourceCurrency.value}
+  = ${formatCurrency(targetCurrencyValue)} ${selectTargetCurrency.value}
+  `
+}
 
 // Change country flags upon select
 
@@ -74,3 +84,6 @@ function changeFlag(selectElement) {
   }
 }
 // Format currency
+function formatCurrency(number) {
+return new Intl.NumberFormat().format(number)
+}
