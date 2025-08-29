@@ -158,3 +158,13 @@ body {
   color: var(--dark-gray);
   font-size: 24px;
 }
+
+.currency-converter__exchange-rate {
+  border: solid 2px rgba(0, 0, 0, 0.2);
+  padding-block: 12px;
+  text-align: center;
+  margin-top: 32px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: 300ms ease;
+}
