@@ -172,3 +172,17 @@ body {
 .currency-converter__exchange-rate:hover {
   background: rgba(0, 0, 0, 0.2);
 }
+
+.currency-converter__convert-btn {
+  width: 100%;
+  margin-top: 24px;
+  padding-block: 6px;
+  background: var(--primary-color);
+  color: var(--dark-gray);
+  font-weight: 600;
+  border-radius: 99px;
+  border: solid 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 150ms ease;
+  font-size: 18px;
+}
