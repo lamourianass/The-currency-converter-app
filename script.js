@@ -5,11 +5,39 @@ import { currencyToFlagCode } from './currency-to-flag-code.js'
 const currencyConverterSelect = document.querySelectorAll('.currency-converter__select select')
 const imageSourceCurrency = document.getElementById('imageSourceCurrency')
 const imageTargetCurrency = document.getElementById('imageTargetCurrency')
+const inputSourceCurrency = document.getElementById('inputSourceCurrency')
+const exchangeRateText = document.getElementById('exchangeRateText')
+const selectSourceCurrency = document.getElementById('selectSourceCurrency')
+const selectTargetCurrency = document.getElementById('selectTargetCurrency')
+const btnConvert = document.getElementById('btnConvert')
+
+let conversionRate = 0
 // Swap source and target currencies
 
 // Update exchange rate upon input
 
 // Perform conversion when button is clicked
+btnConvert.addEventListener('click', async () => {
+  if (inputSourceCurrency.value <= 0) {
+    alert('Please enter a valid amount!')
+    return
+  }
+  exchangeRateText.textContent = 'Fetching exchange rate, please wait...'
+  const selectSourceCurrencyValue = selectSourceCurrency.value
+  const selectTargetCurrencyValue = selectTargetCurrency.value
+  try {
+    const response = await fetch(`https://v6.exchangerate-api.com/v6/858cce0852ca7c1d95758db5/pair/${selectSourceCurrencyValue}/${selectTargetCurrencyValue}`)
+    const data = await response.json()
+    conversionRate = data.conversion_rate
+    updateExchangeRate()
+
+  } catch (error) {
+    console.log('Error fetching exchange rate!', error)
+    exchangeRateText.textContent = 'Error fetching exchange rate!'
+  }
+
+
+})
 
 // Update exchange rate displayed
 
