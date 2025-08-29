@@ -186,3 +186,7 @@ body {
   transition: 150ms ease;
   font-size: 18px;
 }
+
+.currency-converter__convert-btn:hover {
+  transform: scale(0.95);
+}
