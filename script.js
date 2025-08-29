@@ -2,7 +2,7 @@
 import { currencyToFlagCode } from './currency-to-flag-code.js'
 
 // Select elements from the DOM
-
+const currencyConverterSelect = document.querySelectorAll('.currency-converter__select select')
 // Swap source and target currencies
 
 // Update exchange rate upon input
