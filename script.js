@@ -14,9 +14,15 @@ const btnConvert = document.getElementById('btnConvert')
 let conversionRate = 0
 let sourceCurrencyValue = 0
 let targetCurrencyValue = 0
+let isFetching = false
 // Swap source and target currencies
 
 // Update exchange rate upon input
+inputSourceCurrency.addEventListener('input', e => {
+  if (isFetching && inputSourceCurrency.value > 0) {
+    updateExchangeRate()
+  }
+})
 
 // Perform conversion when button is clicked
 btnConvert.addEventListener('click', async () => {
@@ -30,6 +36,7 @@ btnConvert.addEventListener('click', async () => {
   try {
     const response = await fetch(`https://v6.exchangerate-api.com/v6/858cce0852ca7c1d95758db5/pair/${selectSourceCurrencyValue}/${selectTargetCurrencyValue}`)
     const data = await response.json()
+    isFetching = true
     conversionRate = data.conversion_rate
     updateExchangeRate()
 
@@ -85,5 +92,5 @@ function changeFlag(selectElement) {
 }
 // Format currency
 function formatCurrency(number) {
-return new Intl.NumberFormat().format(number)
+  return new Intl.NumberFormat().format(number)
 }
