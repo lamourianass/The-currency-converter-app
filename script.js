@@ -69,6 +69,9 @@ currencyConverterSelect.forEach(selectElement => {
     selectElement.appendChild(newOptionElement)
   }
   selectElement.addEventListener('change', () => {
+    inputSourceCurrency.value = 0
+    isFetching = false
+    updateExchangeRate()
     changeFlag(selectElement)
   })
   if (selectElement.id === 'selectSourceCurrency') {
