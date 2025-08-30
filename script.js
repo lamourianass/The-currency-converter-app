@@ -10,12 +10,23 @@ const exchangeRateText = document.getElementById('exchangeRateText')
 const selectSourceCurrency = document.getElementById('selectSourceCurrency')
 const selectTargetCurrency = document.getElementById('selectTargetCurrency')
 const btnConvert = document.getElementById('btnConvert')
+const btnSwap = document.getElementById('btnSwap')
 
 let conversionRate = 0
 let sourceCurrencyValue = 0
 let targetCurrencyValue = 0
 let isFetching = false
 // Swap source and target currencies
+
+btnSwap.addEventListener('click', () => {
+  [selectSourceCurrency.value, selectTargetCurrency.value] = [selectTargetCurrency.value, selectSourceCurrency.value];
+  [imageSourceCurrency.src, imageTargetCurrency.src] = [imageTargetCurrency.src, imageSourceCurrency.src];
+  inputSourceCurrency.value = targetCurrencyValue;
+  if(isFetching) {
+    conversionRate = 1 / conversionRate
+  }
+  updateExchangeRate()
+})
 
 // Update exchange rate upon input
 inputSourceCurrency.addEventListener('input', e => {
